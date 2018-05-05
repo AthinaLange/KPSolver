@@ -3,7 +3,8 @@ A how to guide to installing the required software to run the KP Solver that can
 Starting from scratch this is what you need to do (no CLION) ...
 
 # Virtual Machine
-!!! virtual box requires Intel Virtualization Technology in BIOS to be enabled
+# ---------------
+# !!! virtual box requires Intel Virtualization Technology in BIOS to be enabled
 Power up computer
 During boot enter BIOS setup (use of of those keys to get into BIOS: DEL, F1, F2, F8, F10, F12)
 Set "Intel Virtualization Technology" Enabled
@@ -12,6 +13,7 @@ Firefox: https://www.virtualbox.org/wiki/Linux_Downloads
 VirtualBox/virtualbox-5.1_5.1.2-108956~Ubuntu~xenial_amd64.deb
 
 # Ubuntu
+# ------
 Firefox: http://www.ubuntu.com/desktop 
 ubuntu-16.04.1-desktop-amd64.iso
 
@@ -19,11 +21,13 @@ $: sudo apt-get update
 $: sudo apt-get upgrade
 
 # C++ Compiler
+# ------------
 $: sudo apt-get install build-essential 
 
 # Cmake Build Tool 3.8
-!!! boost version 1.64 requires cmake version 3.8, therefore building cmake by hand
-delete previous installation of cmake if installed
+# --------------------
+# !!! boost version 1.64 requires cmake version 3.8, therefore building cmake by hand
+# delete previous installation of cmake if installed
 $: sudo apt-get purge cmake
 Firefox: https://cmake.org/files/
 Firefox: Click v3.8
@@ -44,7 +48,7 @@ cmake version 3.8.2
 Take a look at the tutorial: https://cmake.org/cmake-tutorial/
 
 # Doxygen
-
+# -------
 $: sudo apt-get install doxygen
 $: sudo apt-get install doxygen-doc
 $: sudo apt-get install doxygen-gui
@@ -56,6 +60,7 @@ $: sudo apt-get install texlive-full
 $: sudo apt-get install texmaker
 
 # Boost 1.64
+# ----------
 Firefox: http://www.boost.org/users/history/ 
 Firefox: Click Version 1.64.0 "Download"
 Firefox: Click “boost_1_64_0.tar.bz2”
@@ -80,6 +85,7 @@ add_executable(kp main.cpp)
 target_link_libraries(kp ${Boost_LIBRARIES})
 
 # Project
+# -------
 $: cd ~/sw/project
 
 $: doxygen -g
